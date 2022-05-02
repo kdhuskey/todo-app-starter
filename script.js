@@ -63,7 +63,7 @@ newTodo.addEventListener('submit', function(e){
     checkbox.addEventListener("click", function () {
     if (checkbox.checked) {
     completedList.appendChild(addedTask)
-    newTask.completed = true
+    todoItems.completed = true
     } else {
     theTodoList.appendChild(addedTask)
         }
@@ -104,7 +104,7 @@ for (let item of todoItems) {
     checkbox.addEventListener("click", function () {
         if (checkbox.checked) {
             completeList.appendChild(currentItem)
-            newTask.completed = true
+            // todoItems.completed = true
         } else {
             incompleteList.appendChild(currentItem)
         }
