@@ -21,12 +21,7 @@ newTodo.style.backgroundColor = 'yellow'
 task.style.backgroundColor = 'pink'
 
 
-const deleteButton = document.createElement('button')
-    // deleteButton.classList.add('remove')
-    deleteButton.innerText = 'Remove?'
-    deleteButton.addEventListener('click', function(){
-        addedTask.remove()
-    })
+
 
 
 
@@ -77,7 +72,6 @@ newTodo.addEventListener('submit', function(e){
 })
 
 
-
 for (let item of todoItems) {
     const currentItem = document.createElement('li')
     currentItem.classList.add('list-group-item')
@@ -103,6 +97,7 @@ for (let item of todoItems) {
     deleteButton.classList.add('remove')
     deleteButton.innerText = 'Remove?'
     deleteButton.type = 'button'
+    currentItem.appendChild(deleteButton)
     deleteButton.addEventListener('click', function(){
         currentItem.remove()
     })
@@ -114,7 +109,6 @@ for (let item of todoItems) {
             incompleteList.appendChild(currentItem)
         }
     })
-    // currentItem.appendChild('deleteButton')
 
 }
 // refresh.. need to figure out how to get the og form to work again
