@@ -7,9 +7,6 @@ console.log(todoItems)
 
 const completeList = document.querySelector('#complete-items')
 const incompleteList = document.querySelector('#incomplete-items')
-// completeList.style.backgroundColor = 'blue'
-// incompleteList.style.backgroundColor = 'pink'
-
 
 const newTodo = document.querySelector('#todoForm')
 const task = document.querySelector('.form-control')
@@ -19,11 +16,6 @@ const bodyB = document.querySelector('body')
 bodyB.style.backgroundColor = 'skyBlue'
 newTodo.style.backgroundColor = 'yellow'
 task.style.backgroundColor = 'pink'
-
-
-
-
-
 
 newTodo.addEventListener('submit', function(e){
     e.preventDefault()
@@ -45,11 +37,11 @@ newTodo.addEventListener('submit', function(e){
     const deleteButton = document.createElement('button')
     // deleteButton.classList.add('remove')
     deleteButton.innerText = 'Remove?'
+    deleteButton.style.float = 'right'
     deleteButton.addEventListener('click', function(){
         addedTask.remove()
     })
     
-
     checkbox.classList.add('form-check-input')
     label.classList.add('form-check-label', 'ps-3')
     addedTask.appendChild(checkbox)
@@ -70,8 +62,6 @@ newTodo.addEventListener('submit', function(e){
     })
 
 })
-
-
 for (let item of todoItems) {
     const currentItem = document.createElement('li')
     currentItem.classList.add('list-group-item')
@@ -92,11 +82,11 @@ for (let item of todoItems) {
         incompleteList.appendChild(currentItem)
         
     }
-    
     const deleteButton = document.createElement('button')
     deleteButton.classList.add('remove')
     deleteButton.innerText = 'Remove?'
     deleteButton.type = 'button'
+    deleteButton.style.float = 'right'
     currentItem.appendChild(deleteButton)
     deleteButton.addEventListener('click', function(){
         currentItem.remove()
@@ -109,7 +99,6 @@ for (let item of todoItems) {
             incompleteList.appendChild(currentItem)
         }
     })
-
 }
 // refresh.. need to figure out how to get the og form to work again
 // const refreshPage = document.querySelector('#clearPage')
@@ -118,4 +107,3 @@ for (let item of todoItems) {
 //     completeList.remove()
 //     incompleteList.remove()
 // })
-
