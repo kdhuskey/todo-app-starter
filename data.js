@@ -1,4 +1,4 @@
-const todoItems = [
+let todoItems = [
   {
     id: 1,
     title: "Learn HTML",
